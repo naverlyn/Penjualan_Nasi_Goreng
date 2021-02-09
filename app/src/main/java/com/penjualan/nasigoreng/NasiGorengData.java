@@ -16,11 +16,11 @@ public class NasiGorengData
 
     private static String[] details =
             {
-                    "a",
-                    "b",
-                    "c",
-                    "d",
-                    "e"
+                    "Lezat",
+                    "Lezat",
+                    "Lezat",
+                    "Lezat",
+                    "Lezat"
             };
 
     private static int[] imgNasiGoreng =

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Nasi Goreng</string>
+    <string name="nasi_goreng_name">List Nasi Goreng</string>
+    <string name="detail">Detail</string>
+</resources>

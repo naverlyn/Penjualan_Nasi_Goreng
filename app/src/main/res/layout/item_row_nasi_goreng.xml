@@ -39,6 +39,12 @@
             android:ellipsize="end"
             android:maxLines="2"
             tools:text="@string/detail"/>
+        <Button
+            android:id="@+id/btn_detail_move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/detail"/>
     </LinearLayout>
 
 </LinearLayout>

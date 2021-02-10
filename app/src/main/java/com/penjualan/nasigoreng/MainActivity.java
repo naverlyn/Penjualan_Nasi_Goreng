@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rvNasiGoreng.setHasFixedSize(true);
         list.addAll(NasiGorengData.getListData());
         showRecyclerList();
+
+        //problem start here!
         //Button btnMoveWithDataActivity = findViewById(R.id.btn_detail_move);
         //btnMoveWithDataActivity.setOnClickListener(this);
     }

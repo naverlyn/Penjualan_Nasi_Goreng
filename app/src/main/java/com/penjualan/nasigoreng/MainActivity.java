@@ -25,19 +25,7 @@ public class MainActivity extends AppCompatActivity
         rvNasiGoreng.setHasFixedSize(true);
         list.addAll(NasiGorengData.getListData());
         showRecyclerList();
-        //problem start here!
-//        btn_move = (Button) findViewById(R.id.btn_detail_move);
-//        btn_move.setOnClickListener(view -> openNasiGorengDetail());
     }
-
-//    private void openNasiGorengDetail()
-//    {
-//        Intent s = new Intent(this, NasiGorengDetail.class);
-//        s.putExtra(NasiGorengDetail.NAME_FOOD, R.id.name_food);
-//        s.putExtra(NasiGorengDetail.DETAIL_FOOD, R.id.detail_food);
-//        s.putExtra(NasiGorengDetail.IMG_ITEM, R.id.img_item);
-//        startActivity(s);
-//    }
 
     private void showRecyclerList()
     {

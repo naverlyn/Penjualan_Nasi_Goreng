@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
+    Button test;
     private RecyclerView rvNasiGoreng;
     private ArrayList<NasiGoreng> list = new ArrayList<>();
     @Override
@@ -26,24 +27,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         showRecyclerList();
 
         //problem start here!
-//        Button btnMoveWithDataActivity = findViewById(R.id.btn_detail_move);
-//        btnMoveWithDataActivity.setOnClickListener(this);
+//        test = findViewById(R.id.btn_detail_move);
+//        test.setOnClickListener(this);
+    }
 
-    }
-    @Override
-    public void onClick(View v)
-    {
-        switch (v.getId())
+        @Override
+        public void onClick(View v)
         {
-            case R.id.btn_detail_move:
-//                Intent move_data = new Intent(MainActivity.this, NasiGorengDetail.class);
-//                move_data.putExtra(NasiGorengDetail.NAME_FOOD, R.id.name_food);
-//                move_data.putExtra(NasiGorengDetail.DETAIL_FOOD, R.id.detail_food);
-//                move_data.putExtra(NasiGorengDetail.IMG_ITEM, R.id.img_item);
-//                startActivity(move_data);
-                break;
+            switch (v.getId())
+            {
+                case R.id.btn_detail_move:
+                    Intent move_data = new Intent(MainActivity.this, NasiGorengDetail.class);
+                move_data.putExtra(NasiGorengDetail.NAME_FOOD, R.id.name_food);
+                move_data.putExtra(NasiGorengDetail.DETAIL_FOOD, R.id.detail_food);
+                move_data.putExtra(NasiGorengDetail.IMG_ITEM, R.id.img_item);
+                    startActivity(move_data);
+                    break;
+            }
         }
-    }
+
 
     private void showRecyclerList()
     {

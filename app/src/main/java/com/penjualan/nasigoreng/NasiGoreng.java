@@ -2,16 +2,16 @@ package com.penjualan.nasigoreng;
 
 public class NasiGoreng
 {
-    private String nama_nasi_goreng;
+    private String nasi_goreng_name;
     private String detail;
     private int img_nasgor;
 
     public String getNama_nasi_goreng() {
-        return nama_nasi_goreng;
+        return nasi_goreng_name;
     }
 
-    public void setNama_nasi_goreng(String nama_nasi_goreng) {
-        this.nama_nasi_goreng = nama_nasi_goreng;
+    public void setNasi_goreng_name(String nasi_goreng_name) {
+        this.nasi_goreng_name = nasi_goreng_name;
     }
 
     public String getDetail() {
@@ -28,8 +28,5 @@ public class NasiGoreng
 
     public void setImg_nasgor(int img_nasgor) {
         this.img_nasgor = img_nasgor;
-    }
-
-    public void setName(String s) {
     }
 }

@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         showRecyclerList();
 
         //problem start here!
-        //Button btnMoveWithDataActivity = findViewById(R.id.btn_detail_move);
-        //btnMoveWithDataActivity.setOnClickListener(this);
+//        Button btnMoveWithDataActivity = findViewById(R.id.btn_detail_move);
+//        btnMoveWithDataActivity.setOnClickListener(this);
+
     }
     @Override
     public void onClick(View v)
@@ -35,14 +36,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btn_detail_move:
-                Intent move_data = new Intent(MainActivity.this, NasiGorengDetail.class);
-                move_data.putExtra(NasiGorengDetail.NAME_FOOD, R.id.name_food);
-                move_data.putExtra(NasiGorengDetail.DETAIL_FOOD, R.id.detail_food);
-                move_data.putExtra(NasiGorengDetail.IMG_ITEM, R.id.img_item);
-                startActivity(move_data);
+//                Intent move_data = new Intent(MainActivity.this, NasiGorengDetail.class);
+//                move_data.putExtra(NasiGorengDetail.NAME_FOOD, R.id.name_food);
+//                move_data.putExtra(NasiGorengDetail.DETAIL_FOOD, R.id.detail_food);
+//                move_data.putExtra(NasiGorengDetail.IMG_ITEM, R.id.img_item);
+//                startActivity(move_data);
                 break;
         }
-
     }
 
     private void showRecyclerList()

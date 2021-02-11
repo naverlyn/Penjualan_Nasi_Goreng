@@ -38,7 +38,7 @@ public class NasiGorengData
         for (int pos = 0; pos < NasiGorengName.length; pos++)
         {
             NasiGoreng nasigoreng = new NasiGoreng();
-            nasigoreng.setName(NasiGorengName[pos]);
+            nasigoreng.setNasi_goreng_name(NasiGorengName[pos]);
             nasigoreng.setDetail(details[pos]);
             nasigoreng.setImg_nasgor(imgNasiGoreng[pos]);
             list.add(nasigoreng);

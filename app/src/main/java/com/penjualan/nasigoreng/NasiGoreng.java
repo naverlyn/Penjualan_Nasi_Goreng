@@ -4,6 +4,7 @@ public class NasiGoreng
 {
     private String nasi_goreng_name;
     private String detail;
+    private String price;
     private int img_nasgor;
 
     public String getNama_nasi_goreng() {
@@ -28,5 +29,13 @@ public class NasiGoreng
 
     public void setImg_nasgor(int img_nasgor) {
         this.img_nasgor = img_nasgor;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

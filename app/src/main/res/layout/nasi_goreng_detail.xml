@@ -2,49 +2,56 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+        android:layout_height="wrap_content">
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="match_parent">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
+                    android:src="@drawable/nasi_goreng_aceh"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:id="@+id/img_item"/>
 
-                <TextView
-                    android:id="@+id/name_food"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="@string/nasi_goreng_name"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/name_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:text="@string/nasi_goreng_name"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/detail_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="310dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:text="@string/detail"
+                        android:textSize="20sp" />
                 <TextView
-                    android:id="@+id/detail_food"
+                    android:id="@+id/harga_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="400dp"
-                    android:gravity="center"
-                    android:text="@string/detail"
-                    android:textSize="20sp" />
-
+                    android:layout_marginTop="280dp"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/harga"/>
+                    <Button
+                        android:id="@+id/btn_beli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_beli"/>
             </FrameLayout>
-        </LinearLayout>
-    </ScrollView>
-
-
+    </LinearLayout>
 </RelativeLayout>

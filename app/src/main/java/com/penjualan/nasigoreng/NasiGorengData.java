@@ -14,6 +14,15 @@ public class NasiGorengData
                     "Nasi Goreng Aceh"
             };
 
+    private static String[] price =
+            {
+                    "Rp. 14.000,-",
+                    "Rp. 13.500,-",
+                    "Rp. 22.000,-",
+                    "Rp. 10.000,-",
+                    "Rp. 12.000,-"
+            };
+
     private static String[] details =
             {
                     "Nasi Goreng Jawa memiliki cita rasa unik",
@@ -40,6 +49,7 @@ public class NasiGorengData
             NasiGoreng nasigoreng = new NasiGoreng();
             nasigoreng.setNasi_goreng_name(NasiGorengName[pos]);
             nasigoreng.setDetail(details[pos]);
+            nasigoreng.setPrice(price[pos]);
             nasigoreng.setImg_nasgor(imgNasiGoreng[pos]);
             list.add(nasigoreng);
         }

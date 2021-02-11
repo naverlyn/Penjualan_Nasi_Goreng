@@ -95,6 +95,7 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
                     s.putExtra(NasiGorengDetail.NAME_FOOD, nasiGoreng.getNama_nasi_goreng());
                     s.putExtra(NasiGorengDetail.DETAIL_FOOD, nasiGoreng.getDetail());
                     s.putExtra("img_item", nasiGoreng.getImg_nasgor());
+                    s.putExtra(NasiGorengDetail.PRICE, nasiGoreng.getPrice());
                     ListViewHolder.this.itemView.getContext().startActivity(s);
                 }
             });

@@ -22,25 +22,25 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
                     android:id="@+id/img_item"/>
+
                 <TextView
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
                     android:id="@+id/name_food"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginTop="30dp"
-                    android:text="@string/nasi_goreng_name"/>
-                <TextView
-                    android:textSize="20sp"
                     android:gravity="center"
+                    android:text="@string/nasi_goreng_name"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/detail_food"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="220dp"
                     android:layout_marginTop="400dp"
+                    android:gravity="center"
                     android:text="@string/detail"
-                    android:layout_centerHorizontal="true"/>
+                    android:textSize="20sp" />
 
             </FrameLayout>
         </LinearLayout>

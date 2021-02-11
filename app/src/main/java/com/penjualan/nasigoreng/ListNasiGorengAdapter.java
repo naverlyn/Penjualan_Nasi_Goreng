@@ -1,8 +1,11 @@
 package com.penjualan.nasigoreng;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,12 +15,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.security.AccessController;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAdapter.ListViewHolder>
 {
+    Context context;
     private ArrayList<NasiGoreng> listNasiGoreng;
+    public OnItemClickCallback onItemClickCallback;
+
+    public interface OnItemClickCallback {
+        void onItemClicked(NasiGoreng nasigoreng);
+    }
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback2) {
+        this.onItemClickCallback = onItemClickCallback2;
+        this.context = this.context;
+    }
 
     public ListNasiGorengAdapter(ArrayList<NasiGoreng> list)
     {
@@ -40,6 +55,13 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
                 .into(holder.imgNasiGoreng);
                 holder.nasi_goreng_text.setText(nasigoreng.getNama_nasi_goreng());
                 holder.details.setText(nasigoreng.getDetail());
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        ListNasiGorengAdapter.this.onItemClickCallback.onItemClicked(ListNasiGorengAdapter.this.listNasiGoreng.get(holder.getAdapterPosition()));
+                    }
+                });
+        holder.binding(this.listNasiGoreng.get(position));
     }
 
     @Override
@@ -51,11 +73,32 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
     {
         ImageView imgNasiGoreng;
         TextView nasi_goreng_text, details;
+        Button btn_move;
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
             imgNasiGoreng = itemView.findViewById(R.id.img_item);
             nasi_goreng_text = itemView.findViewById(R.id.item_name_text);
             details = itemView.findViewById(R.id.detail);
+            btn_move = itemView.findViewById(R.id.btn_detail_move);
+        }
+
+        public void binding(final NasiGoreng nasiGoreng)
+        {
+            this.imgNasiGoreng.setImageResource(nasiGoreng.getImg_nasgor());
+            this.nasi_goreng_text.setText(nasiGoreng.getNama_nasi_goreng());
+            this.details.setText(nasiGoreng.getDetail());
+            this.itemView.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    Intent s = new Intent(ListViewHolder.this.itemView.getContext(), NasiGorengDetail.class);
+                    s.putExtra(NasiGorengDetail.NAME_FOOD, nasiGoreng.getNama_nasi_goreng());
+                    s.putExtra(NasiGorengDetail.DETAIL_FOOD, nasiGoreng.getDetail());
+                    s.putExtra("img_item", nasiGoreng.getImg_nasgor());
+                    ListViewHolder.this.itemView.getContext().startActivity(s);
+                }
+            });
         }
     }
 }

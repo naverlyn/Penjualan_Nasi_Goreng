@@ -36,15 +36,5 @@
             android:maxLines="2"
             android:layout_marginBottom="10dp"
             tools:text="@string/detail"/>
-
-        <Button
-            android:id="@+id/btn_detail_move"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="@string/btn_detail"/>
-
-
     </LinearLayout>
-
 </LinearLayout>

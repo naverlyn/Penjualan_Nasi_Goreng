@@ -16,11 +16,11 @@ public class NasiGorengData
 
     private static String[] details =
             {
-                    "Lezat",
-                    "Lezat",
-                    "Lezat",
-                    "Lezat",
-                    "Lezat"
+                    "Nasi Goreng Jawa memiliki cita rasa unik",
+                    "Ini juga, tapi ngapak bahasanya. cuman dimodif tambah katsu doang, tapi enak ngl.",
+                    "yo this is nasgor jaksel which is enak banget kalo you want to try this. you'll not regret when read this text.",
+                    "ENAAAAAAAAAAAAAAK",
+                    "ENNNAAAAAAAAAKKKKKKKKKKKKK"
             };
 
     private static int[] imgNasiGoreng =

@@ -73,7 +73,6 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
     {
         ImageView imgNasiGoreng;
         TextView nasi_goreng_text, details;
-        Button btn_move;
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
             imgNasiGoreng = itemView.findViewById(R.id.img_item);

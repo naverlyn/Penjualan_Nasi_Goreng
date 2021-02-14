@@ -15,12 +15,17 @@
         android:textAlignment="center"/>
 
     <ImageView
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/nasi_goreng_name"
         android:id="@+id/img_name_get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
         android:src="@drawable/nasi_goreng_aceh"/>
+
     <TextView
+        android:layout_marginTop="5dp"
         android:id="@+id/harga_get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,5 +45,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/btn_beli"/>
+        android:text="@string/checkout"/>
 </LinearLayout>

@@ -30,10 +30,10 @@ public class NasiGorengDetail extends AppCompatActivity {
         String name = getIntent().getStringExtra(NAME_FOOD);
         String detail = getIntent().getStringExtra(DETAIL_FOOD);
         String price = getIntent().getStringExtra(PRICE);
-        this.imgs = (ImageView) findViewById(R.id.img_item);
-        this.nameNasgor = (TextView) findViewById(R.id.name_food);
-        this.detailed = (TextView) findViewById(R.id.detail_food);
-        this.price = (TextView) findViewById(R.id.harga_text);
+        this.imgs = (ImageView) findViewById(R.id.img_name_get);
+        this.nameNasgor = (TextView) findViewById(R.id.nasgor_name_get);
+        this.detailed = (TextView) findViewById(R.id.deskripsi);
+        this.price = (TextView) findViewById(R.id.harga_get);
         this.imgs.setImageResource(image);
         this.nameNasgor.setText(name);
         this.detailed.setText(detail);

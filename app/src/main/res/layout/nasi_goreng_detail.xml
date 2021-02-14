@@ -1,57 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/nasgor_name_get"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/nasi_goreng_aceh"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/img_item"/>
+        android:layout_height="wrap_content"
+        android:text="@string/nasi_goreng_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
-                    <TextView
-                        android:id="@+id/name_food"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="250dp"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="left"
-                        android:text="@string/nasi_goreng_name"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+    <ImageView
+        android:contentDescription="@string/nasi_goreng_name"
+        android:id="@+id/img_name_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nasi_goreng_aceh"/>
+    <TextView
+        android:id="@+id/harga_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/harga"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
 
-                    <TextView
-                        android:id="@+id/detail_food"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="310dp"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="left"
-                        android:text="@string/detail"
-                        android:textSize="20sp" />
-                <TextView
-                    android:id="@+id/harga_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="280dp"
-                    android:textSize="15dp"
-                    android:gravity="left"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/harga"/>
-                    <Button
-                        android:id="@+id/btn_beli"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/btn_beli"/>
-            </FrameLayout>
-    </LinearLayout>
-</RelativeLayout>
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detail"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_beli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_beli"/>
+</LinearLayout>

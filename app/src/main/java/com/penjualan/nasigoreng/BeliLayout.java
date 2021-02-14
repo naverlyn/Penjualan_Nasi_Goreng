@@ -14,11 +14,13 @@ public class BeliLayout extends AppCompatActivity {
     ImageView images;
     TextView nasgorGet;
     TextView price_get;
+    String title = "Beli Nasi Goreng";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beli_layout);
+        setActionBar(this.title);
         int image = getIntent().getIntExtra("img_item", 0);
         String name = getIntent().getStringExtra(NAME_FOOD);
         String price = getIntent().getStringExtra(PRICE);
@@ -28,5 +30,13 @@ public class BeliLayout extends AppCompatActivity {
         this.images.setImageResource(image);
         this.nasgorGet.setText(name);
         this.price_get.setText(price);
+    }
+
+    private void setActionBar(String title)
+    {
+        if (getSupportActionBar() != null)
+        {
+            getSupportActionBar().setTitle((CharSequence) title);
+        }
     }
 }

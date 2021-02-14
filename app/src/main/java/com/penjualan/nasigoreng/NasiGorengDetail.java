@@ -20,11 +20,13 @@ public class NasiGorengDetail extends AppCompatActivity {
     TextView nameNasgor;
     TextView price;
 
+    String titles = "Detail Nasi Goreng";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nasi_goreng_detail);
-        //setActionBar(this.getTitle());
+        setActionBar(this.titles);
         int image = getIntent().getIntExtra("img_item", 0);
         String name = getIntent().getStringExtra(NAME_FOOD);
         String detail = getIntent().getStringExtra(DETAIL_FOOD);
@@ -39,6 +41,14 @@ public class NasiGorengDetail extends AppCompatActivity {
         this.price.setText(price);
         Button s = (Button) findViewById(R.id.btn_beli);
         s.setOnClickListener(view -> showBeli());
+    }
+
+    private void setActionBar(String titles)
+    {
+        if(getSupportActionBar() != null)
+        {
+            getSupportActionBar().setTitle((CharSequence) titles);
+        }
     }
 
     public void showBeli()

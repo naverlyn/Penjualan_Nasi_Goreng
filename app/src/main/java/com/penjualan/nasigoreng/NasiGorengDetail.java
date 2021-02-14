@@ -13,7 +13,6 @@ import org.w3c.dom.Text;
 public class NasiGorengDetail extends AppCompatActivity {
     public static String NAME_FOOD = "name_food";
     public static String DETAIL_FOOD = "detail_food";
-    public static String IMG_ITEM = "img_item";
     public static String PRICE = "price";
 
     TextView detailed;

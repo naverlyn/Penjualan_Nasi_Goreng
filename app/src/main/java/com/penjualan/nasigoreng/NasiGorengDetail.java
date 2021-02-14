@@ -41,12 +41,14 @@ public class NasiGorengDetail extends AppCompatActivity {
         Button s = (Button) findViewById(R.id.btn_beli);
         s.setOnClickListener(view -> showBeli());
     }
+
     public void showBeli()
     {
         Intent y = new Intent(this, BeliLayout.class);
-        y.putExtra(BeliLayout.NAME_FOOD, R.id.nasgor_name_get);
-        //y.putExtra("img_item", nasiGoreng.getImg_nasgor());
-        y.putExtra(BeliLayout.PRICE, R.id.harga_get);
+//        String m = y.getStringExtra(NAME_FOOD);
+        y.putExtra(String.valueOf(nameNasgor), BeliLayout.NAME_FOOD);
+//        y.putExtra(String.valueOf(imgs), BeliLayout.IMG_ITEM);
+        y.putExtra(String.valueOf(price), String.valueOf(price));
         startActivity(y);
     }
 }

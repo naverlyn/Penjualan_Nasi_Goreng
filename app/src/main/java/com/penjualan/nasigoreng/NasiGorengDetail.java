@@ -44,6 +44,9 @@ public class NasiGorengDetail extends AppCompatActivity {
     public void showBeli()
     {
         Intent y = new Intent(this, BeliLayout.class);
+        y.putExtra(BeliLayout.NAME_FOOD, R.id.nasgor_name_get);
+        //y.putExtra("img_item", nasiGoreng.getImg_nasgor());
+        y.putExtra(BeliLayout.PRICE, R.id.harga_get);
         startActivity(y);
     }
 }

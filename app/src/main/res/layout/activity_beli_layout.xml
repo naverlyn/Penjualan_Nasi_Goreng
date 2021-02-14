@@ -11,23 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:src="@drawable/nasi_goreng_aceh"
         android:scaleType="fitXY"/>
+
     <TextView
         android:id="@+id/beli_nasgor_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nasi_goreng_name"
-        android:textSize="20sp"/>
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
     <TextView
+        android:layout_marginTop="5dp"
         android:id="@+id/harga_beli"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/harga"/>
+        android:text="@string/harga"
+        android:textSize="16sp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Beli (Dalam satuan)" />
+        android:text="Beli (Dalam satuan)"/>
 
     <EditText
         android:id="@+id/edt_length"
@@ -40,5 +49,5 @@
         android:id="@+id/btn_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hitung" />
+        android:text="@string/btn_beli" />
 </LinearLayout>

@@ -4,5 +4,6 @@
     <string name="detail">Detail</string>
     <string name="btn_detail">Lebih Lanjut</string>
     <string name="btn_beli">Beli</string>
+    <string name="checkout">Checkout</string>
     <string name="harga">Harga Jual</string>
 </resources>

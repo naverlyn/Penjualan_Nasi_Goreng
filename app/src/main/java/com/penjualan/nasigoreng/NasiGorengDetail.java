@@ -4,13 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class NasiGorengDetail extends AppCompatActivity {
+public class NasiGorengDetail extends AppCompatActivity{
     public static String NAME_FOOD = "name_food";
     public static String DETAIL_FOOD = "detail_food";
     public static String PRICE = "price";
@@ -53,10 +55,14 @@ public class NasiGorengDetail extends AppCompatActivity {
 
     public void showBeli()
     {
-        Intent y = new Intent(getApplicationContext(), BeliLayout.class);
-//        y.putExtra(String.valueOf(nameNasgor), BeliLayout.NAME_FOOD);
-//        y.putExtra(String.valueOf(imgs), BeliLayout.IMG_ITEM);
-//        y.putExtra(String.valueOf(price), String.valueOf(price));
-        startActivity(y);
+        TextView beli = null;
+        Button btn_checkout = null;
+        EditText editText = null;
+        beli = findViewById(R.id.beli_text);
+        btn_checkout = findViewById(R.id.btn_checkout);
+        editText = findViewById(R.id.input_beli);
+        beli.setVisibility(View.VISIBLE);
+        btn_checkout.setVisibility(View.VISIBLE);
+        editText.setVisibility(View.VISIBLE);
     }
 }

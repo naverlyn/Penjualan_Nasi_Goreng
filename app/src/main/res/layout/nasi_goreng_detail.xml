@@ -46,4 +46,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/checkout"/>
+
+    <TextView
+        android:id="@+id/beli_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/beli_satuan"
+        android:visibility="invisible"/>
+    <EditText
+        android:id="@+id/input_beli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_beli"
+        android:visibility="invisible"/>
 </LinearLayout>

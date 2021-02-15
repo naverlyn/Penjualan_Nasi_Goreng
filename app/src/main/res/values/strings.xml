@@ -6,4 +6,5 @@
     <string name="btn_beli">Beli</string>
     <string name="checkout">Beli Sekarang!</string>
     <string name="harga">Harga Jual</string>
+    <string name="beli_satuan">Beli (dalam satuan)</string>
 </resources>

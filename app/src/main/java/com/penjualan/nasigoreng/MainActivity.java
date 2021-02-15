@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
-//    private Button btn_move;
     private RecyclerView rvNasiGoreng;
     private ArrayList<NasiGoreng> list = new ArrayList<>();
     @Override

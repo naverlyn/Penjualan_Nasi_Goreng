@@ -36,5 +36,11 @@
             android:maxLines="2"
             android:layout_marginBottom="10dp"
             tools:text="@string/detail"/>
+
+        <Button
+            android:id="@+id/lebih_lanjut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_detail"/>
     </LinearLayout>
 </LinearLayout>

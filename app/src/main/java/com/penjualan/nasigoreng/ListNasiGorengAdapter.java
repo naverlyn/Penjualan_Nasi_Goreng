@@ -73,11 +73,13 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
     {
         ImageView imgNasiGoreng;
         TextView nasi_goreng_text, details;
+        Button btn_move;
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
             imgNasiGoreng = itemView.findViewById(R.id.img_item);
             nasi_goreng_text = itemView.findViewById(R.id.item_name_text);
             details = itemView.findViewById(R.id.detail);
+            btn_move = itemView.findViewById(R.id.lebih_lanjut);
         }
 
         public void binding(final NasiGoreng nasiGoreng)
@@ -85,7 +87,7 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
             this.imgNasiGoreng.setImageResource(nasiGoreng.getImg_nasgor());
             this.nasi_goreng_text.setText(nasiGoreng.getNama_nasi_goreng());
             this.details.setText(nasiGoreng.getDetail());
-            this.itemView.setOnClickListener(new View.OnClickListener()
+            this.btn_move.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View view)
@@ -95,7 +97,7 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
                     s.putExtra(NasiGorengDetail.DETAIL_FOOD, nasiGoreng.getDetail());
                     s.putExtra("img_item", nasiGoreng.getImg_nasgor());
                     s.putExtra(NasiGorengDetail.PRICE, nasiGoreng.getPrice());
-                    ListViewHolder.this.itemView.getContext().startActivity(s);
+                    ListViewHolder.this.btn_move.getContext().startActivity(s);
                 }
             });
         }

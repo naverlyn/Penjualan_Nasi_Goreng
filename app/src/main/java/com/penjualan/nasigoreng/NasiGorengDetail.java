@@ -53,11 +53,10 @@ public class NasiGorengDetail extends AppCompatActivity {
 
     public void showBeli()
     {
-        Intent y = new Intent(this, BeliLayout.class);
-//        String m = y.getStringExtra(NAME_FOOD);
-        y.putExtra(String.valueOf(nameNasgor), BeliLayout.NAME_FOOD);
+        Intent y = new Intent(getApplicationContext(), BeliLayout.class);
+//        y.putExtra(String.valueOf(nameNasgor), BeliLayout.NAME_FOOD);
 //        y.putExtra(String.valueOf(imgs), BeliLayout.IMG_ITEM);
-        y.putExtra(String.valueOf(price), String.valueOf(price));
+//        y.putExtra(String.valueOf(price), String.valueOf(price));
         startActivity(y);
     }
 }

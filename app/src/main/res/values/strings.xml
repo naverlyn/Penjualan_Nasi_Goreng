@@ -3,8 +3,9 @@
     <string name="nasi_goreng_name">List Nasi Goreng</string>
     <string name="detail">Detail</string>
     <string name="btn_detail">Lebih Lanjut</string>
-    <string name="btn_beli">Beli</string>
+    <string name="btn_beli">Totalkan</string>
     <string name="checkout">Beli Sekarang!</string>
+    <string name="checkout_now">Beli</string>
     <string name="harga">Harga Jual</string>
     <string name="beli_satuan">Beli (dalam satuan)</string>
     <string name="transaksi_selesai">Transaksi Berhasil.</string>

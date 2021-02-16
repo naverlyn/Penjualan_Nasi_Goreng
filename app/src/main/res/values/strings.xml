@@ -12,4 +12,5 @@
     <string name="kembali">Kembali ke Halaman Awal</string>
     <string name="total_yang_harus_dibayar">Total yang harus dibayar:</string>
     <string name="placeholder_harga_disini">placeholder harga disini</string>
+    <string name="angka_saja">Angka saja</string>
 </resources>

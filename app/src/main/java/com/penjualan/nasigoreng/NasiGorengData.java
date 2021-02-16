@@ -16,11 +16,11 @@ public class NasiGorengData
 
     private static String[] price =
             {
-                    "Rp. 14.000,-",
-                    "Rp. 13.500,-",
-                    "Rp. 22.000,-",
-                    "Rp. 10.000,-",
-                    "Rp. 12.000,-"
+                    "14.000",
+                    "13.500",
+                    "22.000",
+                    "10.000",
+                    "12.000"
             };
 
     private static String[] details =
@@ -30,6 +30,15 @@ public class NasiGorengData
                     "yo this is nasgor jaksel which is enak banget kalo you want to try this. you'll not regret when read this text.",
                     "ENAAAAAAAAAAAAAAK",
                     "ENNNAAAAAAAAAKKKKKKKKKKKKK"
+            };
+
+    private static String[] priceInt =
+            {
+              "14000",
+              "13500",
+              "22000",
+              "10000",
+              "12000"
             };
 
     private static int[] imgNasiGoreng =
@@ -51,6 +60,7 @@ public class NasiGorengData
             nasigoreng.setDetail(details[pos]);
             nasigoreng.setPrice(price[pos]);
             nasigoreng.setImg_nasgor(imgNasiGoreng[pos]);
+            nasigoreng.setPriceInt(priceInt[pos]);
             list.add(nasigoreng);
         }
         return list;

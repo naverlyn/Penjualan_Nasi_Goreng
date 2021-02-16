@@ -7,4 +7,6 @@
     <string name="checkout">Beli Sekarang!</string>
     <string name="harga">Harga Jual</string>
     <string name="beli_satuan">Beli (dalam satuan)</string>
+    <string name="transaksi_selesai">Transaksi Berhasil.</string>
+    <string name="kembali">Kembali ke Halaman Awal</string>
 </resources>

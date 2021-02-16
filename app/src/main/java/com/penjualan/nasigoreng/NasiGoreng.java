@@ -5,6 +5,7 @@ public class NasiGoreng
     private String nasi_goreng_name;
     private String detail;
     private String price;
+    private String priceInt;
     private int img_nasgor;
 
     public String getNama_nasi_goreng() {
@@ -37,5 +38,13 @@ public class NasiGoreng
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getPriceInt() {
+        return priceInt;
+    }
+
+    public void setPriceInt(String priceInt) {
+        this.priceInt = priceInt;
     }
 }

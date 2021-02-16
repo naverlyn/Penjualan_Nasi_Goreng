@@ -55,22 +55,24 @@
         android:text="@string/beli_satuan"
         android:visibility="invisible"/>
     <EditText
+        android:hint="@string/angka_saja"
         android:id="@+id/input_beli"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:visibility="invisible"/>
     <TextView
         android:id="@+id/total_bayar_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total yang harus dibayar:"
+        android:text="@string/total_yang_harus_dibayar"
         android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/show_harga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="placeholder harga disini"
+        android:text="@string/placeholder_harga_disini"
         android:textSize="32sp"
         android:textStyle="bold"
         android:visibility="invisible"/>
@@ -79,7 +81,6 @@
         android:id="@+id/layout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <Button

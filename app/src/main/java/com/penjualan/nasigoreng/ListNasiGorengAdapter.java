@@ -31,7 +31,7 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
 
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback2) {
         this.onItemClickCallback = onItemClickCallback2;
-        this.context = this.context;
+//        this.context = this.context;
     }
 
     public ListNasiGorengAdapter(ArrayList<NasiGoreng> list)
@@ -55,12 +55,7 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
                 .into(holder.imgNasiGoreng);
                 holder.nasi_goreng_text.setText(nasigoreng.getNama_nasi_goreng());
                 holder.details.setText(nasigoreng.getDetail());
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        ListNasiGorengAdapter.this.onItemClickCallback.onItemClicked(ListNasiGorengAdapter.this.listNasiGoreng.get(holder.getAdapterPosition()));
-                    }
-                });
+                holder.itemView.setOnClickListener(view -> ListNasiGorengAdapter.this.onItemClickCallback.onItemClicked(ListNasiGorengAdapter.this.listNasiGoreng.get(holder.getAdapterPosition())));
         holder.binding(this.listNasiGoreng.get(position));
     }
 
@@ -87,18 +82,14 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
             this.imgNasiGoreng.setImageResource(nasiGoreng.getImg_nasgor());
             this.nasi_goreng_text.setText(nasiGoreng.getNama_nasi_goreng());
             this.details.setText(nasiGoreng.getDetail());
-            this.btn_move.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View view)
-                {
-                    Intent s = new Intent(ListViewHolder.this.itemView.getContext(), NasiGorengDetail.class);
-                    s.putExtra(NasiGorengDetail.NAME_FOOD, nasiGoreng.getNama_nasi_goreng());
-                    s.putExtra(NasiGorengDetail.DETAIL_FOOD, nasiGoreng.getDetail());
-                    s.putExtra("img_item", nasiGoreng.getImg_nasgor());
-                    s.putExtra(NasiGorengDetail.PRICE, nasiGoreng.getPrice());
-                    ListViewHolder.this.btn_move.getContext().startActivity(s);
-                }
+            this.btn_move.setOnClickListener(view -> {
+                Intent s = new Intent(ListViewHolder.this.itemView.getContext(), NasiGorengDetail.class);
+                s.putExtra(NasiGorengDetail.NAME_FOOD, nasiGoreng.getNama_nasi_goreng());
+                s.putExtra(NasiGorengDetail.DETAIL_FOOD, nasiGoreng.getDetail());
+                s.putExtra("img_item", nasiGoreng.getImg_nasgor());
+                s.putExtra(NasiGorengDetail.PRICE, nasiGoreng.getPrice());
+                s.putExtra(NasiGorengDetail.PARSEINTPRICE, nasiGoreng.getPriceInt());
+                ListViewHolder.this.btn_move.getContext().startActivity(s);
             });
         }
     }

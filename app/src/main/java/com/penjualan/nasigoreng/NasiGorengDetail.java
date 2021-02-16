@@ -3,6 +3,7 @@ package com.penjualan.nasigoreng;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -65,9 +67,9 @@ public class NasiGorengDetail extends AppCompatActivity{
 
     public void showBeli()
     {
-        TextView beli = null;
-        Button btn_checkout = null;
-        EditText editText = null;
+        TextView beli;
+        Button btn_checkout;
+        EditText editText;
         beli = findViewById(R.id.beli_text_only);
         btn_checkout = findViewById(R.id.totalkan);
         editText = findViewById(R.id.input_beli);
@@ -78,24 +80,33 @@ public class NasiGorengDetail extends AppCompatActivity{
 
     public void showD()
     {
-        TextView totalbayartext = null;
-        TextView showHarga = null;
+        TextView totalbayartext;
+        TextView showHarga;
         TextView harga_asli;
         EditText inputHarga;
-        Button checkout = null;
+        Button checkout;
         int h, ih, tt;
         inputHarga = findViewById(R.id.input_beli);
         totalbayartext = findViewById(R.id.total_bayar_text);
         harga_asli = findViewById(R.id.parseInt);
         checkout = findViewById(R.id.btn_checkout);
-        h = Integer.parseInt(harga_asli.getText().toString());
-        ih = Integer.parseInt(inputHarga.getText().toString());
-        tt = h*ih;
         showHarga = findViewById(R.id.show_harga);
-        showHarga.setText("Rp." + tt + ",-");
+        if (inputHarga.getText().toString().trim().length() <= 0)
+        {
+            Toast.makeText(this, "It's empty", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            h = Integer.parseInt(harga_asli.getText().toString());
+            ih = Integer.parseInt(inputHarga.getText().toString());
+            tt = h*ih;
+            showHarga.setText("Rp." + tt + ",-");
+        }
+
         showHarga.setVisibility(View.VISIBLE);
         totalbayartext.setVisibility(View.VISIBLE);
         checkout.setVisibility(View.VISIBLE);
+
     }
 
     public void showTerimakasih()

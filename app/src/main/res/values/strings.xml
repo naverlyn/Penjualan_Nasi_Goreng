@@ -10,4 +10,6 @@
     <string name="beli_satuan">Beli (dalam satuan)</string>
     <string name="transaksi_selesai">Transaksi Berhasil.</string>
     <string name="kembali">Kembali ke Halaman Awal</string>
+    <string name="total_yang_harus_dibayar">Total yang harus dibayar:</string>
+    <string name="placeholder_harga_disini">placeholder harga disini</string>
 </resources>

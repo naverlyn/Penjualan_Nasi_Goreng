@@ -111,6 +111,7 @@ public class NasiGorengDetail extends AppCompatActivity{
 
     public void showTerimakasih()
     {
-
+        Intent j = new Intent(this, IsiAlamat.class);
+        startActivity(j);
     }
 }

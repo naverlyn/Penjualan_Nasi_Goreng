@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NasiGoreng">
         <activity android:name=".TerimaKasih"></activity>
-        <activity android:name=".NonExistence" />
+        <activity android:name=".IsiAlamat" />
         <activity android:name=".NasiGorengDetail" />
         <activity android:name=".MainActivity">
             <intent-filter>

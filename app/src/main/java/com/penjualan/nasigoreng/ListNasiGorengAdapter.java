@@ -55,7 +55,7 @@ public class ListNasiGorengAdapter extends RecyclerView.Adapter<ListNasiGorengAd
                 .into(holder.imgNasiGoreng);
                 holder.nasi_goreng_text.setText(nasigoreng.getNama_nasi_goreng());
                 holder.details.setText(nasigoreng.getDetail());
-                holder.itemView.setOnClickListener(view -> ListNasiGorengAdapter.this.onItemClickCallback.onItemClicked(ListNasiGorengAdapter.this.listNasiGoreng.get(holder.getAdapterPosition())));
+                holder.btn_move.setOnClickListener(view -> ListNasiGorengAdapter.this.onItemClickCallback.onItemClicked(ListNasiGorengAdapter.this.listNasiGoreng.get(holder.getAdapterPosition())));
         holder.binding(this.listNasiGoreng.get(position));
     }
 

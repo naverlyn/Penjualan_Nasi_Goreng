@@ -47,7 +47,7 @@ public class NasiGorengDetail extends AppCompatActivity{
         this.imgs.setImageResource(image);
         this.nameNasgor.setText(name);
         this.detailed.setText(detail);
-        this.price.setText(price);
+        this.price.setText("Rp. " + price + ",-");
         this.parseIntPrice.setText(parsePrice);
         Button s = (Button) findViewById(R.id.btn_beli);
         s.setOnClickListener(view -> showBeli());

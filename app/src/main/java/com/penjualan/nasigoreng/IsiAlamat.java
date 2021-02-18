@@ -23,7 +23,6 @@ public class IsiAlamat extends AppCompatActivity
         Button thanks = (Button) findViewById(R.id.beli_sekarang_btn);
         thanks.setOnClickListener(View -> showDialogCustom());
     }
-
     private void setActionBar(String name)
     {
         if (getSupportActionBar() != null)
@@ -31,33 +30,26 @@ public class IsiAlamat extends AppCompatActivity
             getSupportActionBar().setTitle((CharSequence) name);
         }
     }
-
     void showDialogCustom()
     {
+        EditText fromAtasNama, fromAlamat, fromKelurahan;
+        fromAtasNama = (EditText) findViewById(R.id.atas_nama);
+        fromAlamat = (EditText) findViewById(R.id.alamat_text);
+        fromKelurahan = (EditText) findViewById(R.id.kelurahan_text);
         AlertDialog.Builder dialogBuild = new AlertDialog.Builder(this);
         dialogBuild.setTitle("Perhatian!");
         dialogBuild
-                .setMessage("Apakah alamat yang sudah tertera sudah benar?")
-                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent s = new Intent(IsiAlamat.this, TerimaKasih.class);
-                        startActivity(s);
-                    }
+                .setMessage("Apakah alamat yang sudah tertera sudah benar? \n"
+                        + "\n"
+                        + "Atas Nama: " + fromAtasNama.getText().toString() + "\n"
+                        + "Alamat: " + fromAlamat.getText().toString() + "\n"
+                        + "Kelurahan: " + fromKelurahan.getText().toString())
+                .setPositiveButton("Ya", (dialogInterface, i) -> {
+                    Intent s = new Intent(IsiAlamat.this, TerimaKasih.class);
+                    startActivity(s);
                 })
-                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
+                .setNegativeButton("Tidak", (dialogInterface, i) -> dialogInterface.cancel());
         AlertDialog dialog = dialogBuild.create();
         dialog.show();
-    }
-
-    private void showanjay()
-    {
-        Intent z = new Intent(this, TerimaKasih.class);
-        startActivity(z);
     }
 }

@@ -15,4 +15,7 @@
     <string name="angka_saja">Angka saja</string>
     <string name="alamat">Alamat:</string>
     <string name="kelurahan">Kelurahan:</string>
+    <string name="tidak">Tidak</string>
+    <string name="ya">Ya</string>
+    <string name="tanya_alamat">Apakah alamat sudah benar?</string>
 </resources>
